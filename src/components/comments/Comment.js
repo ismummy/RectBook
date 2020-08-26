@@ -1,16 +1,13 @@
 import React from "react";
+import ReactTimeAgo from 'react-time-ago'
 
 const Comment = ({comment}) => (
     <>
-        <strong className="pull-left primary-font">James</strong>
+        <strong className="pull-left primary-font">{comment.name}</strong>
         <small className="pull-right text-muted">
-            <span className="glyphicon glyphicon-time"/>7 mins ago</small>
+            <span className="glyphicon glyphicon-time"/><ReactTimeAgo date={comment.created_at}/></small>
         <br/>
-        <li className="ui-state-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco
-            laboris nisi ut aliquip ex ea commodo consequat.
+        <li className="ui-state-default">{comment.comment}
         </li>
         <br/>
     </>
