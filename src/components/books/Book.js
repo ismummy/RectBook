@@ -3,7 +3,7 @@ import "./Book.css";
 import {Link} from "react-router-dom";
 
 const Book = ({book}) => {
-const authors = book.authors.map(author => <p> {author.name} |</p>)
+    const authors = book.authors.map(author => <p> {author.name} |</p>)
     return (
         <Link to={"/books/" + book.id} className="col-sm-6 col-md-4 col-lg-3 mt-4">\
             <div className="card">
@@ -15,7 +15,8 @@ const authors = book.authors.map(author => <p> {author.name} |</p>)
                     </div>
                     <div className="card-text">
                         Published by {book.publisher} at {book.country} with
-                        isbn {book.isbn} in {book.mediaType} of {book.numberOfPages} pages.
+                        isbn {book.isbn} in {book.mediaType} of {book.numberOfPages} pages
+                        and {book.characters_count} characters.
                     </div>
                 </div>
                 <div className="card-footer">
