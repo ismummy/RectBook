@@ -44,7 +44,7 @@ const BookDetail = () => {
                 <div className="row">
                     {characters}
                 </div>
-                <Comments comments={book.comments}/>
+                <Comments comments={book.comments} bookId={book.id}/>
                 <div className="footer">
                     <p>Developed by: Ismummy</p>
                 </div>
