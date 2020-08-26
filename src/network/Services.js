@@ -1,7 +1,8 @@
 import axios from "axios"
 
 
-axios.defaults.baseURL = "http://localhost:8000"
+//axios.defaults.baseURL = "http://localhost:8000"
+axios.defaults.baseURL = "https://mabookdiary.herokuapp.com/"
 
 export default class Services {
     static get(path) {
