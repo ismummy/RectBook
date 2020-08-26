@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Redirect, Route, Router, Switch} from "react-router-dom"
+import {createBrowserHistory} from "history"
+import JavascriptTimeAgo from "javascript-time-ago"
+import en from "javascript-time-ago/locale/en"
+import MainPage from "./layouts/MainPage";
+import BookDetail from "./layouts/BookDetail";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    JavascriptTimeAgo.locale(en)
+    const hist = createBrowserHistory()
+    return (
+        <Router history={hist}>
+            <Switch>
+                <Route exact path="/books" component={MainPage}/>
+                <Route path="/books/:id" component={BookDetail}/>
+                <Redirect from="/" to="/books"/>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
