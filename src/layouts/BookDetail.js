@@ -20,7 +20,8 @@ const BookDetail = () => {
             }).catch(error => {
             console.log(error)
         })
-    }, []);
+    }, [id]);
+
     let characters = '';
     let details = '';
     if (book) {
@@ -29,7 +30,7 @@ const BookDetail = () => {
             <div className="wrapper">
                 <div className="header">{book.name}</div>
                 <div className="banner-img">
-                    <img src="https://picsum.photos/640/360/?random" alt="Image 1"/>
+                    <img src="https://picsum.photos/640/360/?random" alt="1"/>
                 </div>
                 <div className="dates">
                     <div className="start">

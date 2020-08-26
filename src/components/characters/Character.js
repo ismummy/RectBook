@@ -10,7 +10,7 @@ const Character = ({character}) => (
                         <div className="card-body text-center">
                             <p><img className=" img-fluid"
                                     src="https://picsum.photos/200/?random"
-                                    alt="card image"/></p>
+                                    alt="card"/></p>
                             <h4 className="card-title">{character.name}</h4>
                             <p className="card-text">I am a {character.gender}.</p>
                         </div>

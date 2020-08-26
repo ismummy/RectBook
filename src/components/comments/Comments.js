@@ -33,9 +33,9 @@ const Comments = ({comments, bookId}) => {
                            onChange={e => setComment(e.target.value)}
                     />
                     <span className="input-group-btn" onClick={handleSubmit}>
-                        <a href="#" className="btn btn-primary btn-sm">
+                        <button className="btn btn-primary btn-sm">
                             <span className="glyphicon glyphicon-comment"/> Add Comment
-                        </a>
+                        </button>
                     </span>
                 </div>
                 <hr data-brackets-id="12673"/>
